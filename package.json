@@ -1,0 +1,25 @@
+{
+  "name": "com.scottdoxey.unityropecontroller",
+  "displayName": "UnityRopeController",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "unityRelease": "18f1",
+  "description": "A simple component generates a rope, rendered as a line, between two GameObjects.",
+  "license": "MIT",
+  "dependencies": {},
+  "keywords": [
+    "unity",
+    "component",
+    "rope"
+  ],
+  "author": {
+    "name": "Scott Doxey",
+    "email": "hello@scottdoxey.com",
+    "homepage": "http://scottdoxey.com/"
+  },
+  "homepage": "https://github.com/neogeek/UnityRopeController",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neogeek/UnityRopeController.git"
+  }
+}
