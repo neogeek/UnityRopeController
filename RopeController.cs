@@ -133,8 +133,12 @@ namespace ScottDoxey
 
         private Rigidbody CreateRopeJoint(Vector3 position, Rigidbody connectedBody)
         {
-            var go = new GameObject { name = "Rope Joint (Spawned)", transform = { position = position } };
-            go.layer = _layerMaskForJoints;
+            var go = new GameObject
+            {
+                name = "Rope Joint (Spawned)",
+                transform = { position = position },
+                layer = (int)Mathf.Clamp(Mathf.Log(_layerMaskForJoints.value, 2), 0, 31)
+            };
 
             var rb = go.AddComponent<Rigidbody>();
 
