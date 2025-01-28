@@ -131,6 +131,8 @@ namespace ScottDoxey
 
             var rb = go.AddComponent<Rigidbody>();
 
+            rb.collisionDetectionMode = _anchor.collisionDetectionMode;
+
             SetupRopeJoint(rb.gameObject, connectedBody);
 
             return rb;
