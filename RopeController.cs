@@ -74,9 +74,9 @@ namespace ScottDoxey
         [SerializeField]
         private SoftJointLimitConfig _swing2Limit = new() { limit = 140, contactDistance = 5 };
 
-        private List<Rigidbody> _joints = new();
+        private readonly List<Rigidbody> _joints = new();
 
-        private List<GameObject> _spawned = new();
+        private readonly List<GameObject> _spawned = new();
 
         private void Start()
         {
