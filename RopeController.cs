@@ -54,6 +54,9 @@ namespace ScottDoxey
         private bool _generateCollidersForJoints;
 
         [SerializeField]
+        private LayerMask _layerMaskForJoints = 1;
+
+        [SerializeField]
         private Vector3 _axis = new(0, 1, 0);
 
         [SerializeField]
@@ -131,6 +134,7 @@ namespace ScottDoxey
         private Rigidbody CreateRopeJoint(Vector3 position, Rigidbody connectedBody)
         {
             var go = new GameObject { name = "Rope Joint (Spawned)", transform = { position = position } };
+            go.layer = _layerMaskForJoints;
 
             var rb = go.AddComponent<Rigidbody>();
 
@@ -141,7 +145,6 @@ namespace ScottDoxey
                 var jointCollider = go.AddComponent<SphereCollider>();
 
                 jointCollider.radius = _lineRenderer.startWidth / 2;
-                jointCollider.gameObject.layer = _anchor.gameObject.layer;
             }
 
             SetupRopeJoint(rb.gameObject, connectedBody);
