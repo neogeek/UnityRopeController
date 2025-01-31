@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 namespace ScottDoxey
@@ -82,7 +83,11 @@ namespace ScottDoxey
 
         private readonly List<Rigidbody> _joints = new();
 
+        public ReadOnlyCollection<Rigidbody> Joints => _joints.AsReadOnly();
+
         private readonly List<GameObject> _spawned = new();
+
+        public ReadOnlyCollection<GameObject> Spawned => _spawned.AsReadOnly();
 
         private void Start()
         {
