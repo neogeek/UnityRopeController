@@ -94,7 +94,6 @@ namespace ScottDoxey
             UpdateRopeDraw();
         }
 
-        [ContextMenu("SetupRope")]
         private void SetupRope()
         {
             if (_anchor is null)
@@ -172,7 +171,6 @@ namespace ScottDoxey
             joint.connectedBody = connectedBody;
         }
 
-        [ContextMenu("TeardownRope")]
         private void TeardownRope()
         {
             for (var i = 0; i < _spawned.Count; i += 1)
