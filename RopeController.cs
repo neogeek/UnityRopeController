@@ -101,6 +101,11 @@ namespace ScottDoxey
 
         public void SetupRope()
         {
+            if (_joints.Count > 0)
+            {
+                return;
+            }
+
             if (_anchor is null)
             {
                 throw new InvalidOperationException($"The {nameof(_anchor)} component property was not set.");
